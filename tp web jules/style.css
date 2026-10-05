@@ -1,0 +1,83 @@
+/* POUR L'ORAL : "Voici mon fichier CSS. Tout ce qui est écrit ici sert à faire le design du site." */
+
+/* POUR L'ORAL : "La balise body cible toute la page. J'ai ajouté de l'espace entre les lignes avec line-height pour étaler le texte et le faire respirer." */
+body {
+    background-color: #e4e2dd; /* Gris-beige clair façon galet/pierre */
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    margin: 40px auto; /* Plus de marges en haut et en bas pour aérer */
+    max-width: 900px; /* Empêche le texte de s'étirer sur toute la largeur d'un grand écran */
+    color: #333333;
+    line-height: 1.8; /* Texte étalé en hauteur */
+    letter-spacing: 0.5px; /* Lettres légèrement écartées */
+}
+
+/* POUR L'ORAL : "J'ai agrandi la taille de base des paragraphes et ajouté des marges en dessous." */
+p {
+    font-size: 18px; 
+    margin-bottom: 25px; 
+}
+
+/* POUR L'ORAL : "Ici je personnalise les titres h1 et h2 avec des couleurs dans le thème de la terre et de l'ardoise, et j'écarte un peu les lettres." */
+h1 {
+    color: #4e342e; /* Marron terre foncé */
+    font-size: 36px; 
+    letter-spacing: 1px; 
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #546e7a; /* Gris-bleu ardoise */
+    font-size: 26px;
+    margin-top: 40px; 
+    margin-bottom: 20px;
+}
+
+/* POUR L'ORAL : "Pour l'image, je l'ai bien agrandie à 400 pixels de large et j'ai arrondi les bords avec border-radius." */
+.conteneur-image {
+    text-align: center; 
+    margin: 30px 0; 
+}
+
+.image-style {
+    width: 400px; 
+    height: auto; 
+    border-radius: 12px; 
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+/* POUR L'ORAL : "J'ai créé une classe 'mon-bouton' pour modifier l'apparence de base des boutons HTML." */
+.mon-bouton {
+    background-color: #607d8b; /* Gris-bleu ardoise */
+    color: white; 
+    font-size: 18px; 
+    padding: 15px 30px; 
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer; 
+    margin: 10px; 
+    transition: background-color 0.3s;
+}
+
+/* POUR L'ORAL : "Le mot-clé :hover permet de changer la couleur du bouton au moment précis où la souris passe dessus." */
+.mon-bouton:hover {
+    background-color: #37474f; 
+}
+
+/* POUR L'ORAL : "Pour différencier mes boutons, j'ai créé une deuxième classe qui change la couleur en marron." */
+.bouton-secondaire {
+    background-color: #8d6e63; /* Marron clair */
+}
+
+.bouton-secondaire:hover {
+    background-color: #5d4037; 
+}
+
+/* POUR L'ORAL : "J'ai modified la balise hr pour faire des lignes de séparation plus espacées." */
+hr {
+    border: 0;
+    height: 2px;
+    background: #bcaaa4; 
+    margin: 40px auto; 
+    width: 70%; 
+}

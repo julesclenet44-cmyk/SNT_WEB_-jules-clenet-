@@ -1,0 +1,94 @@
+<!-- POUR L'ORAL : "Bonjour, je vais vous présenter mon site. Tout d'abord, la ligne en dessous indique au navigateur qu'on utilise la dernière version du langage, le HTML5." -->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- POUR L'ORAL : "La balise head contient les paramètres invisibles. Ici, meta charset UTF-8 permet d'afficher les accents français correctement." -->
+    <meta charset="UTF-8">
+    <title>Le site des Cailloux - SNT</title>
+
+    <!-- POUR L'ORAL : "Cette ligne link est très importante, c'est elle qui relie ma page HTML à mon fichier de design CSS." -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- POUR L'ORAL : "La balise body contient le Front-end, c'est-à-dire tout ce que l'utilisateur voit sur la page." -->
+
+    <!-- POUR L'ORAL : "J'ai utilisé h1 pour le titre principal, et p pour les paragraphes normaux." -->
+    <h1>Bienvenue sur mon site 100% Cailloux !</h1>
+    <p>Ceci est ma première page web créée pendant le cours de SNT.</p>
+
+    <hr> <!-- Ceci trace une ligne de séparation horizontale -->
+
+    <!-- POUR L'ORAL : "Pour l'image, j'utilise la balise img. Le src indique le nom exact de mon fichier, ici images.jfif." -->
+    <h2>Mon magnifique Caillou</h2>
+    <div class="conteneur-image">
+        <img src="images.jfif" alt="Image d'un caillou" class="image-style">
+    </div>
+
+    <hr>
+
+    <!-- POUR L'ORAL : "Voici la partie JavaScript. J'ai ajouté l'événement onclick sur ces boutons. Quand on clique, ça lance une alerte (une pop-up)." -->
+    <h2>Boutons d'Alerte</h2>
+    <p>Cliquez sur les boutons ci-dessous pour voir ce qu'ils font :</p>
+    <button class="mon-bouton" onclick="alert('Voici un caillou !')">Cliquez-moi (Alerte 1)</button>
+    <button class="mon-bouton bouton-secondaire" onclick="alert('Ça, c\'est un vrai caillou !')">Alerte 2</button>
+
+    <hr>
+
+    <!-- POUR L'ORAL : "Ici, on va plus loin avec des fonctions JavaScript. Chaque paragraphe a un 'id' unique pour que le code puisse les retrouver et les modifier." -->
+    <h2>Interactions dynamiques avec JavaScript</h2>
+
+    <p id="texte">Ce texte va se transformer...</p>
+    <button class="mon-bouton" onclick="changerTexte()">Changer le texte</button>
+
+    <br><br><br> <!-- Sauts de ligne pour aérer -->
+
+    <p id="deuxiemeTexte">Ceci est un paragraphe tout à fait normal.</p>
+    <button class="mon-bouton bouton-secondaire" onclick="modifierDeuxiemeTexte()">Modifier ce texte & couleur</button>
+
+    <hr>
+
+    <!-- POUR L'ORAL : "Pour mon projet bonus, j'ai créé un compteur pour compter mes cailloux. La balise span permet d'isoler le chiffre 0 pour le modifier dynamiquement." -->
+    <h2>Compteur de Cailloux</h2>
+    <p>Nombre de cailloux ramassés : <span id="compteur">0</span></p>
+    <button class="mon-bouton" onclick="incrémenterCompteur()">+1 Caillou</button>
+    <button class="mon-bouton bouton-secondaire" onclick="réinitialiserCompteur()">Vider les poches (0)</button>
+
+
+    <!-- POUR L'ORAL : "Tout le code JavaScript qui fait fonctionner les boutons se trouve ici, entre les balises script." -->
+    <script>
+        // Le double slash '//' sert à faire des commentaires en JavaScript !
+        
+        // POUR L'ORAL : "Cette fonction change le texte et la couleur du premier paragraphe."
+        function changerTexte() {
+            // getElementById cherche l'élément HTML qui s'appelle "texte"
+            // innerHTML remplace ce qu'il y a écrit à l'intérieur
+            document.getElementById("texte").innerHTML = "Et hop, un caillou validé par Jules !";
+            // .style.color modifie directement le CSS depuis le JavaScript
+            document.getElementById("texte").style.color = "#2E7D32"; // Vert nature
+        }
+
+        // POUR L'ORAL : "Cette deuxième fonction fait la même chose sur un autre paragraphe, en le mettant en marron et en gras."
+        function modifierDeuxiemeTexte() {
+            document.getElementById("deuxiemeTexte").innerHTML = "Maintenant, même ce texte parle de cailloux !";
+            document.getElementById("deuxiemeTexte").style.color = "#5D4037"; // Marron
+            document.getElementById("deuxiemeTexte").style.fontWeight = "bold";
+        }
+
+        // POUR L'ORAL : "Pour le compteur, j'ai déclaré une variable 'nombre' qui démarre à zéro."
+        let nombre = 0; 
+
+        function incrémenterCompteur() {
+            nombre = nombre + 1; // Ajoute +1 à la variable
+            document.getElementById("compteur").innerHTML = nombre; // Affiche le nouveau nombre sur la page
+        }
+
+        function réinitialiserCompteur() {
+            nombre = 0; // Remet la variable à zéro
+            document.getElementById("compteur").innerHTML = nombre; // Met à jour l'affichage
+        }
+    </script>
+
+</body>
+</html>
